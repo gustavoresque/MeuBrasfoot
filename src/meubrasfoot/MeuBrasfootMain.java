@@ -18,8 +18,13 @@ public class MeuBrasfootMain {
         System.out.println("Hello Brasfoot!!");
         
         
-        Jogador j = new Jogador();
+        Jogador j = new Jogador("Gustavo",7,"Meia",200,"Paysandu");
+        System.out.println(j.toString());
+        j.venda("Paysandu", "Tuna", 300);
+        System.out.println(j.toString());
         
+       
+       System.out.println(j.toString());
        
         
     }

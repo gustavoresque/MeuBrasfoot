@@ -11,11 +11,23 @@ package meubrasfoot;
 public class Jogador {
     
     
-    String nome;
-    int numero;
-    char posicao;
-    float valor;
-    String clube;
+    private String nome;
+    private int numero;
+    private String posicao;
+    private float valor;
+    private String clube;
+    private int idade;
+
+    public Jogador(String nome, int numero, String posicao, float valor, String clube, int idade) {
+        this.nome = nome;
+        this.numero = numero;
+        this.posicao = posicao;
+        this.valor = valor;
+        this.clube = clube;
+        this.idade = idade;
+    }
+    
+    
     
     
     public void venda(String clubeVendedor, String clubeComprador, float valor){
@@ -24,6 +36,16 @@ public class Jogador {
             this.valor = valor;
         }
     }
+
+    @Override
+    public String toString() {
+        return this.nome+" - "+this.numero+"\n"+
+                "Posição: "+this.posicao+"\n"+
+                "Clube: "+this.clube+"\n"+
+                "Passe: R$"+this.valor+"\n";
+        
+    }
+    
     
     
     
