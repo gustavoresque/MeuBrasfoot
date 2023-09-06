@@ -17,14 +17,21 @@ public class MeuBrasfootMain {
         
         System.out.println("Hello Brasfoot!!");
         
+        Clube paysandu = new Clube("Paysandu", "PAY", "Curuzu", "Pará", 1914);
+        Clube tuna = new Clube("Tuna", "TUN", "Estadio", "Pará", 1930);
         
-        Jogador j = new Jogador("Gustavo",7,"Meia",200,"Paysandu");
+        Jogador j = new Jogador("Gustavo",7,"Meia",200,paysandu,30);
         System.out.println(j.toString());
-        j.venda("Paysandu", "Tuna", 300);
+//        j.venda(paysandu, tuna, 300);
+
+        paysandu.venderJogador(j, tuna, 250, 300);
         System.out.println(j.toString());
         
-       
-       System.out.println(j.toString());
+        
+        System.out.println(paysandu.toString());
+        
+        System.out.println(tuna.toString());
+        
        
         
     }

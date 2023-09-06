@@ -14,26 +14,27 @@ public class Jogador {
     private String nome;
     private int numero;
     private String posicao;
-    private float valor;
-    private String clube;
+    private float salario;
+    private Clube clube;
     private int idade;
 
-    public Jogador(String nome, int numero, String posicao, float valor, String clube, int idade) {
+    public Jogador(String nome, int numero, String posicao, float salario, Clube clube, int idade) {
         this.nome = nome;
         this.numero = numero;
         this.posicao = posicao;
-        this.valor = valor;
+        this.salario = salario;
         this.clube = clube;
+        this.clube.addJogador(this);
         this.idade = idade;
     }
     
     
     
     
-    public void venda(String clubeVendedor, String clubeComprador, float valor){
-        if(clubeVendedor.equals(this.clube) && this.valor <= valor){
+    public void venda(Clube clubeVendedor, Clube clubeComprador, float valor){
+        if(clubeVendedor.equals(this.clube) && this.salario <= valor){
             this.clube = clubeComprador;
-            this.valor = valor;
+            this.salario = valor;
         }
     }
 
@@ -41,9 +42,17 @@ public class Jogador {
     public String toString() {
         return this.nome+" - "+this.numero+"\n"+
                 "Posição: "+this.posicao+"\n"+
-                "Clube: "+this.clube+"\n"+
-                "Passe: R$"+this.valor+"\n";
+                "Clube: "+this.clube.getNome()+"\n"+
+                "Passe: R$"+this.salario+"\n";
         
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
+    }
+
+    void setClube(Clube clube) {
+        this.clube = clube;
     }
     
     
