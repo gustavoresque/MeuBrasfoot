@@ -18,6 +18,8 @@ public class Clube {
     private String estado;
     private int anoFuncacao;
     private LinkedList<Jogador> jogadores;
+    private LinkedList<Jogador> titulares;
+    private LinkedList<Jogador> reservas;
     private float saldo;
 
     
