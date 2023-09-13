@@ -4,6 +4,7 @@
  */
 package meubrasfoot;
 
+import com.mycompany.testexml.Readxml;
 import ui.TelaPrincipal;
 
 /**
@@ -18,6 +19,9 @@ public class MeuBrasfootMain {
     public static void main(String[] args) {
         
         System.out.println("Hello Brasfoot!!");
+        
+        //Readxml xml = new Readxml();
+        //xml.Readerxml(jogadores, clubes);
         
         Clube paysandu = new Clube("Paysandu", "PAY", "Curuzu", "Pará", 1914);
         Clube tuna = new Clube("Tuna", "TUN", "Estadio", "Pará", 1930);
