@@ -22,6 +22,11 @@ public class Clube {
     private LinkedList<Jogador> reservas;
     private float saldo;
 
+    public Clube() {
+    }
+
+    
+      
     
     public Clube(String nome, String abreviacao, String estadio, String estado, int anoFuncacao) {
         this.nome = nome;
