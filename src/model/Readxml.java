@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.testexml;
+package model;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +11,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import meubrasfoot.Clube;
+import meubrasfoot.Clube;
+import meubrasfoot.Jogador;
 import meubrasfoot.Jogador;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

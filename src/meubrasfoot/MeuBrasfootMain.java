@@ -4,7 +4,6 @@
  */
 package meubrasfoot;
 
-import com.mycompany.testexml.Readxml;
 import ui.TelaPrincipal;
 
 /**
