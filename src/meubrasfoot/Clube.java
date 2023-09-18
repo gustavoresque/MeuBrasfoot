@@ -12,32 +12,40 @@ import java.util.LinkedList;
  */
 public class Clube {
     
+    private int id;
     private String nome;
-    private String abreviacao;
-    private String estadio;
-    private String estado;
-    private int anoFuncacao;
+    private String abreviacao;    
+    private String nacionalidade;
+    private int reputacao;
+    private float saldo;
+    //private String estadio;
+    //private String estado;
+    //private int anoFuncacao;    
     private LinkedList<Jogador> jogadores;
     private LinkedList<Jogador> titulares;
     private LinkedList<Jogador> reservas;
-    private float saldo;
-
-    public Clube() {
-    }
-
     
-      
-    
-    public Clube(String nome, String abreviacao, String estadio, String estado, int anoFuncacao) {
+
+     
+    public Clube(int id, String nome, String abreviacao, String nacionalidade, int reputacao, float saldo) {
+        this.id = id;
         this.nome = nome;
         this.abreviacao = abreviacao;
-        this.estadio = estadio;
-        this.estado = estado;
-        this.anoFuncacao = anoFuncacao;
+        this.nacionalidade = nacionalidade;
+        this.reputacao = reputacao;
+        this.saldo = saldo;                
         this.jogadores = new LinkedList<>();
-        this.saldo = 500;
+        //this.estadio = estadio;
+        //this.estado = estado;
+        //this.anoFuncacao = anoFuncacao;
+        
     }
-
+    
+   
+    public int getId() {
+        return id;
+    }
+        
     public String getNome() {
         return nome;
     }
@@ -46,19 +54,30 @@ public class Clube {
         return abreviacao;
     }
 
-    public String getEstadio() {
-        return estadio;
+//    public String getEstadio() {
+//        return estadio;
+//    }
+//
+//    public String getEstado() {
+//        return estado;
+//    }
+//
+//    public int getAnoFuncacao() {
+//        return anoFuncacao;
+//    }
+
+  
+    public int getReputacao() {
+        return reputacao;
     }
 
-    public String getEstado() {
-        return estado;
+    public float getSaldo() {
+        return saldo;
     }
+    
+    
 
-    public int getAnoFuncacao() {
-        return anoFuncacao;
-    }
-
-    public LinkedList<Jogador> getJogadores() {
+    public  LinkedList<Jogador> getJogadores() {
         return jogadores;
     }
     
@@ -72,11 +91,12 @@ public class Clube {
         j.setClube(comprador);
     }
     
-    
-    
+            
     public void addJogador(Jogador j){
         this.jogadores.add(j);
     }
+    
+    
 //    
 //    private void removeJogador(Jogador j){
 //        this.jogadores.remove(j);
@@ -84,11 +104,13 @@ public class Clube {
 
     @Override
     public String toString() {
-        return this.nome+" ("+this.abreviacao+")\n"+
-                "Estadio: "+this.estadio+"\n"+
-                "Estado: "+this.estado+"\n"+
-                "Saldo: R$"+this.saldo+"\n"+
-                "Ano de Fundação: "+this.anoFuncacao+"\n"+
+        return  "id:" + this.id +" " +this.nome+" ("+this.abreviacao+")\n"+
+                "Nacionalidade: "+this.nacionalidade+"\n"+
+                "Reputacao: "+this.reputacao+"\n"+
+                "Saldo: R$"+this.saldo+"\n"+  
+                //"Estadio: "+this.estadio+"\n"+
+                //"Estado: "+this.estado+"\n"+                
+                //"Ano de Fundação: "+this.anoFuncacao+"\n"+
                 "Jogadores: "+this.jogadores.toString()+"\n";
     }
     
