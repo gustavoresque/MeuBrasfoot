@@ -16,7 +16,7 @@ public class Clube {
     private String nome;
     private String abreviacao;    
     private String nacionalidade;
-    private int reputacao;
+    private float reputacao;
     private float saldo;
     //private String estadio;
     //private String estado;
@@ -27,7 +27,7 @@ public class Clube {
     
 
      
-    public Clube(int id, String nome, String abreviacao, String nacionalidade, int reputacao, float saldo) {
+    public Clube(int id, String nome, String abreviacao, String nacionalidade, float reputacao, float saldo) {
         this.id = id;
         this.nome = nome;
         this.abreviacao = abreviacao;
@@ -67,7 +67,7 @@ public class Clube {
 //    }
 
   
-    public int getReputacao() {
+    public float getReputacao() {
         return reputacao;
     }
 

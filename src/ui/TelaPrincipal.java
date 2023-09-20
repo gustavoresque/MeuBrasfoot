@@ -62,7 +62,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 ListaClubes frameListaClubes = new ListaClubes();
-                frameListaClubes.setClubes(new String[]{ "Paysandu", "Tuna" });
                 frameListaClubes.setVisible(true);
             }
         });

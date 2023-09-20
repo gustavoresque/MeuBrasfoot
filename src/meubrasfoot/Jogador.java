@@ -65,6 +65,42 @@ public class Jogador {
     void setClube(Clube clube) {
         this.clube = clube;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public String getPosicao() {
+        return posicao;
+    }
+
+    public float getPower() {
+        return power;
+    }
+
+    public float getPotencia() {
+        return potencia;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public Clube getClube() {
+        return clube;
+    }
     
     
     

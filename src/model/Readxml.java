@@ -22,7 +22,7 @@ import org.xml.sax.SAXException;
 public class Readxml {
     
     
-    String FILENAME = "c:\\Brasileirao_SerieA.xml"; 
+    String FILENAME = "./extractData/Brasileirao_SerieA.xml"; 
     
     public void Readerxml(LinkedList<Clube> clube, LinkedList<Jogador> jogadores){
                
@@ -54,13 +54,13 @@ public class Readxml {
                     // get text
                     String id = element.getElementsByTagName("id").item(0).getTextContent();
                     String nome = element.getElementsByTagName("nome").item(0).getTextContent();                    
-                    String sigla = element.getElementsByTagName("sigla").item(0).getTextContent();
+                    String sigla = nome.substring(0, 3).toUpperCase();
                     String nation = element.getElementsByTagName("nation").item(0).getTextContent();
                     String reputacaoclu = element.getElementsByTagName("reputacao").item(0).getTextContent();
                     String dinheiroclu = element.getElementsByTagName("dinheiro").item(0).getTextContent();
                     
                     int ID = Integer.parseInt(id);
-                    int reputacao = Integer.parseInt(reputacaoclu);
+                    float reputacao = Float.parseFloat(reputacaoclu);
                     float dinheiro = this.match(dinheiroclu); 
                     Clube t1 = new Clube(ID, nome, sigla, nation, reputacao, dinheiro);
                     clube.add(t1);

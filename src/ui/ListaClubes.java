@@ -4,8 +4,10 @@
  */
 package ui;
 
-import java.util.List;
+import java.util.Arrays;
+import java.util.LinkedList;
 import meubrasfoot.Clube;
+import meubrasfoot.Controler;
 
 /**
  *
@@ -13,11 +15,16 @@ import meubrasfoot.Clube;
  */
 public class ListaClubes extends javax.swing.JFrame {
 
+    
+    private LinkedList<Clube> clubes;
+    
+    
     /**
      * Creates new form ListaClubes
-     */
+     */    
     public ListaClubes() {
         initComponents();
+        setClubes();
     }
 
     /**
@@ -34,10 +41,22 @@ public class ListaClubes extends javax.swing.JFrame {
         listaClubes = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
         listaClubes.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
+        });
+        listaClubes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listaClubesMouseClicked(evt);
+            }
+        });
+        listaClubes.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                listaClubesKeyTyped(evt);
+            }
         });
         jScrollPane1.setViewportView(listaClubes);
 
@@ -86,6 +105,20 @@ public class ListaClubes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void listaClubesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaClubesMouseClicked
+        abreClube();
+    }//GEN-LAST:event_listaClubesMouseClicked
+
+    private void listaClubesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_listaClubesKeyTyped
+        if(evt.isActionKey())
+            abreClube();
+    }//GEN-LAST:event_listaClubesKeyTyped
+
+    private void abreClube(){
+        System.out.println(listaClubes.getSelectedIndex());
+        new TelaClube(clubes.get(listaClubes.getSelectedIndex())).setVisible(true);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -123,8 +156,15 @@ public class ListaClubes extends javax.swing.JFrame {
 
     
     
-    public void setClubes(String[] clubes){
-        this.listaClubes.setListData(clubes);
+    private void setClubes(){
+        Controler control = Controler.getInstance();
+        clubes = control.getClubes();
+        String[] nomes = new String[clubes.size()];
+        for (int i = 0; i < nomes.length; i++) {
+            nomes[i] = clubes.get(i).getNome();
+        }
+        System.out.println(Arrays.toString(nomes));
+        this.listaClubes.setListData(nomes);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

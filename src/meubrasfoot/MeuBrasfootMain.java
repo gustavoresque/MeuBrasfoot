@@ -20,31 +20,14 @@ public class MeuBrasfootMain {
         System.out.println("Hello Brasfoot!!");
         
                 
-        Controler controler = new Controler();
+        Controler controler = Controler.getInstance();
         controler.loadDatabase();
 //        System.out.print(controler.getClubes());
-        System.out.print(controler.getJogadores());
+//        System.out.print(controler.getJogadores());
                         
       
         
-//        Clube paysandu = new Clube("Paysandu", "PAY", "Curuzu", "Pará", 1914);
-//        Clube tuna = new Clube("Tuna", "TUN", "Estadio", "Pará", 1930);
-//        
-   
-//        Jogador j5 = new Jogador("Gustavo5",1,"GK",200,tuna,30);
-//        Jogador j6 = new Jogador("Gustavo6",5,"CB",200,tuna,30);
-//        Jogador j7 = new Jogador("Gustavo7",6,"CB",200,tuna,30);
-//        Jogador j8 = new Jogador("Gustavo8",7,"CM",200,tuna,30);
-//        Jogador j9 = new Jogador("Gustavo9",8,"ST",200,tuna,30);
-//        System.out.println(j.toString());
-//        j.venda(paysandu, tuna, 300);
-//
-//        paysandu.venderJogador(j, tuna, 250, 300);
-//        System.out.println(j.toString());
-//                
-//        System.out.println(tuna.toString());
-//              
-        
+       
         //<editor-fold>
         //Abre a tela principal
         try {

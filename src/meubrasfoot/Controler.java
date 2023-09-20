@@ -24,7 +24,7 @@ public class Controler {
     private int temporada;
     private Campeonato[] campeonatos;
     
-    Controler() {
+    private Controler() {
         this.temporada = 2023;
     }
     
