@@ -4,6 +4,7 @@
  */
 package meubrasfoot;
 
+import meubrasfoot.jogos.Torneio;
 import ui.TelaPrincipal;
 
 /**
@@ -26,6 +27,12 @@ public class MeuBrasfootMain {
 //        System.out.print(controler.getJogadores());
                         
       
+        Torneio t = new Torneio(controler.getClubes());
+        
+        while(!t.isFinalizado()){
+            t.runRodada().printPartidas();
+        }
+        
         
        
         //<editor-fold>
